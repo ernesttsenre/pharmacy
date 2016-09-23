@@ -1,0 +1,926 @@
+2016/09/23 11:50:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pharmacy.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2016/09/23 12:01:31 [error] [php] strtotime() expects parameter 1 to be string, object given (/Users/olegivanov/Sites/pharmacy/protected/views/site/index.php:17)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/base/CComponent.php(617): call_user_func_array()
+#1 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CDataColumn.php(142): CDataColumn->evaluateExpression()
+#2 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent()
+#3 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridColumn.php(154): CDataColumn->renderDataCellContent()
+#4 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(638): CDataColumn->renderDataCell()
+#5 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell()
+#6 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow()
+#7 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#8 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#9 unknown(0): CGridView->renderSection()
+#10 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback()
+#11 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(149): CGridView->renderContent()
+#12 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(181): CGridView->run()
+#13 /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php(24): SiteController->widget()
+#14 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(126): require()
+#15 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#16 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#17 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#18 /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php(11): SiteController->render()
+#19 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#20 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#22 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#23 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#24 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#26 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php (17)
+in /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php (24)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php (11)
+2016/09/23 12:03:51 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDataColumn.rowHtmlOptions".' in /Users/olegivanov/Sites/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/YiiBase.php(220): CComponent->__set('rowHtmlOptions', Array)
+#1 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(359): CGridView->initColumns()
+#3 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(147): CGridView->init()
+#4 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php(28): CBaseController->widget('zii.widgets.gri...', Array)
+#6 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(126): require('/Users/olegivan...')
+#7 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/olegivan...', Array, true)
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/olegivan...', Array, true)
+#9 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php(11): CController->render('index', Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/
+---
+2016/09/23 12:07:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/1
+HTTP_REFERER=http://pharmacy.local/
+---
+2016/09/23 12:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/1
+HTTP_REFERER=http://pharmacy.local/
+---
+2016/09/23 12:14:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/1
+HTTP_REFERER=http://pharmacy.local/
+---
+2016/09/23 12:15:27 [error] [php] Trying to get property of non-object (/Users/olegivanov/Sites/pharmacy/protected/views/site/index.php:42)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CButtonColumn.php(342): CButtonColumn->evaluateExpression()
+#1 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CButtonColumn.php(321): CButtonColumn->renderButton()
+#2 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridColumn.php(231): CButtonColumn->getDataCellContent()
+#3 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridColumn.php(154): CButtonColumn->renderDataCellContent()
+#4 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(638): CButtonColumn->renderDataCell()
+#5 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell()
+#6 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow()
+#7 /Users/olegivanov/Sites/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#8 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#9 unknown(0): CGridView->renderSection()
+#10 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback()
+#11 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(149): CGridView->renderContent()
+#12 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(181): CGridView->run()
+#13 /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php(46): SiteController->widget()
+#14 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(126): require()
+#15 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#16 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#17 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#18 /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php(11): SiteController->render()
+#19 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#20 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#22 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#23 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#24 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#26 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php (42)
+in /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php (46)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php (11)
+2016/09/23 12:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "distribution/view".' in /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distribution/vi...')
+#1 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/distribution/1
+HTTP_REFERER=http://pharmacy.local/
+---
+2016/09/23 12:16:09 [error] [exception.CException] exception 'CException' with message 'Контроллер DistributorController не может найти представление "view".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(11): CController->render('view', Array)
+#2 [internal function]: DistributorController->actionView('1')
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#4 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#10 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/distributor/1
+HTTP_REFERER=http://pharmacy.local/
+---
+2016/09/23 12:18:21 [error] [php] Undefined variable: model (/Users/olegivanov/Sites/pharmacy/protected/views/site/index.php:14)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php(16): SiteController->render()
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionPharmacy()
+#4 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/pharmacy
+in /Users/olegivanov/Sites/pharmacy/protected/views/site/index.php (14)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/SiteController.php (16)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 12:54:58 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "File".
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (12)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 13:06:56 [error] [php] file_get_contents(/Users/olegivanov/Sites/pharmacy/upload/1_1474610816.txt): failed to open stream: No such file or directory (/Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php:26)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1100): File->afterSave()
+#1 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(809): File->insert()
+#2 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(16): File->save()
+#3 unknown(0): DistributorController->actionView()
+#4 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#9 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#10 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (26)
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (106)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (16)
+2016/09/23 13:11:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /Users/olegivanov/Sites/yii/framework/web/CController.php:336
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('file/view')
+#5 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#6 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/file/view
+HTTP_REFERER=http://pharmacy.local/distributor/1
+---
+2016/09/23 13:36:57 [error] [php] Undefined offset: 2 (/Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php:65)
+Stack trace:
+#0 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(18): File->convert()
+#1 unknown(0): DistributorController->actionView()
+#2 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#7 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (65)
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (34)
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (88)
+2016/09/23 13:37:10 [error] [php] Undefined offset: 2 (/Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php:65)
+Stack trace:
+#0 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(18): File->convert()
+#1 unknown(0): DistributorController->actionView()
+#2 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#7 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (65)
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (34)
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (88)
+2016/09/23 13:38:12 [error] [php] preg_split(): Empty regular expression (/Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php:65)
+Stack trace:
+#0 /Users/olegivanov/Sites/pharmacy/protected/models/File.php(88): FileConverter->__construct()
+#1 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(18): File->convert()
+#2 unknown(0): DistributorController->actionView()
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#9 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (65)
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverter.php (34)
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (88)
+2016/09/23 13:54:07 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.parameters".' in /Users/olegivanov/Sites/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('parameters', Array)
+#1 /Users/olegivanov/Sites/yii/framework/web/CActiveDataProvider.php(117): CDbCriteria->__construct(Array)
+#2 /Users/olegivanov/Sites/yii/framework/base/CComponent.php(152): CActiveDataProvider->setCriteria(Array)
+#3 /Users/olegivanov/Sites/yii/framework/web/CActiveDataProvider.php(96): CComponent->__set('criteria', Array)
+#4 /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php(17): CActiveDataProvider->__construct('FileExist', Array)
+#5 [internal function]: FileController->actionView('22')
+#6 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#7 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#12 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('file/view')
+#13 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/file/22
+HTTP_REFERER=http://pharmacy.local/distributor/1
+---
+2016/09/23 13:54:17 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.parameter".' in /Users/olegivanov/Sites/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('parameter', Array)
+#1 /Users/olegivanov/Sites/yii/framework/web/CActiveDataProvider.php(117): CDbCriteria->__construct(Array)
+#2 /Users/olegivanov/Sites/yii/framework/base/CComponent.php(152): CActiveDataProvider->setCriteria(Array)
+#3 /Users/olegivanov/Sites/yii/framework/web/CActiveDataProvider.php(96): CComponent->__set('criteria', Array)
+#4 /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php(17): CActiveDataProvider->__construct('FileExist', Array)
+#5 [internal function]: FileController->actionView('22')
+#6 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#7 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#12 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('file/view')
+#13 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/file/22
+HTTP_REFERER=http://pharmacy.local/distributor/1
+---
+2016/09/23 13:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "update".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('update')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/file/update/1
+HTTP_REFERER=http://pharmacy.local/file/22
+---
+2016/09/23 14:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "file".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('file')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('file')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/file')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/file
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 14:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "file".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('file')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('file')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/file')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/file
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:04:21 [warning] [application] Не удалось присвоить небезопасный атрибут "productId" класса "Exist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (169)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (26)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:05:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1553 Cannot drop index 'exist:distributor_id:pharmacy_id:product_id': needed in a foreign key constraint. The SQL statement executed was: DROP INDEX `exist:distributor_id:pharmacy_id:product_id` ON `exist`.
+2016/09/23 15:30:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pharmacy.distibutor' doesn't exist. The SQL statement executed was: UPDATE `distibutor` SET `converter`=:converter WHERE id = :id.
+2016/09/23 15:31:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'converter'. The SQL statement executed was: ALTER TABLE `distributor` ADD `converter` varchar(128) not null.
+2016/09/23 15:52:55 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "Distributor" пытается выбрать недопустимый столбец "pharmacy.title AS "pharmacyTitle"". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php:965
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(1283): CJoinElement->getColumnSelect('pharmacy.title ...')
+#1 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(436): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /Users/olegivanov/Sites/pharmacy/protected/models/Distributor.php(102): CActiveRecord->findAll(Object(CDbCriteria))
+#6 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(29): Distributor->getExistsProvider()
+#7 [internal function]: DistributorController->actionView('1')
+#8 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#10 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#15 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/distributor/1
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 15:53:30 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "Distributor" пытается выбрать недопустимый столбец "exists.pharmacy.title AS "pharmacyTitle"". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php:965
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(1283): CJoinElement->getColumnSelect('exists.pharmacy...')
+#1 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(436): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /Users/olegivanov/Sites/pharmacy/protected/models/Distributor.php(102): CActiveRecord->findAll(Object(CDbCriteria))
+#6 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(29): Distributor->getExistsProvider()
+#7 [internal function]: DistributorController->actionView('1')
+#8 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#10 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#15 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/distributor/1
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 15:53:34 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "Distributor" пытается выбрать недопустимый столбец "pharmacy.title AS "pharmacyTitle"". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php:965
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(1283): CJoinElement->getColumnSelect('pharmacy.title ...')
+#1 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(436): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 /Users/olegivanov/Sites/yii/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /Users/olegivanov/Sites/pharmacy/protected/models/Distributor.php(102): CActiveRecord->findAll(Object(CDbCriteria))
+#6 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(29): Distributor->getExistsProvider()
+#7 [internal function]: DistributorController->actionView('1')
+#8 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#10 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#15 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/distributor/1
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 15:55:48 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sum(exist.count) AS 'count'
+            FROM exist
+            JOIN pharmacy ON ' at line 3. Выполнявшийся SQL-запрос: 
+            SELECT 
+              pharmacy.title   AS 'pharmacy'
+              sum(exist.count) AS 'count'
+            FROM exist
+            JOIN pharmacy ON pharmacy.id = exist.pharmacy_id
+            GROUP BY exist.distributor_id
+        .
+in /Users/olegivanov/Sites/pharmacy/protected/models/Distributor.php (104)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (29)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 15:55:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sum(exist.count) AS 'count'
+            FROM exist
+            JOIN pharmacy ON ' at line 3. The SQL statement executed was: 
+            SELECT 
+              pharmacy.title   AS 'pharmacy'
+              sum(exist.count) AS 'count'
+            FROM exist
+            JOIN pharmacy ON pharmacy.id = exist.pharmacy_id
+            GROUP BY exist.distributor_id
+        ' in /Users/olegivanov/Sites/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/olegivanov/Sites/pharmacy/protected/models/Distributor.php(104): CDbCommand->queryAll()
+#2 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(29): Distributor->getExistsProvider()
+#3 [internal function]: DistributorController->actionView('1')
+#4 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#5 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#10 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#11 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/distributor/1
+HTTP_REFERER=http://pharmacy.local/site/index
+---
+2016/09/23 16:02:02 [error] [php] Undefined index: id (/Users/olegivanov/Sites/yii/framework/web/CArrayDataProvider.php:111)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/zii/widgets/CBaseListView.php(150): CGridView->renderKeys()
+#1 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(181): CGridView->run()
+#2 /Users/olegivanov/Sites/pharmacy/protected/views/distributor/view.php(50): DistributorController->widget()
+#3 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(126): require()
+#4 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): DistributorController->renderInternal()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): DistributorController->renderFile()
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): DistributorController->renderPartial()
+#7 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(35): DistributorController->render()
+#8 unknown(0): DistributorController->actionView()
+#9 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#10 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#13 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#14 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#15 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/views/distributor/view.php (50)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (35)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:05:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "pharmacy".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('pharmacy')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('pharmacy')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/pharmacy')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/pharmacy
+HTTP_REFERER=http://pharmacy.local/distributor/1
+---
+2016/09/23 16:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "pharmacy".' in /Users/olegivanov/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CController.php(270): CController->missingAction('pharmacy')
+#1 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('pharmacy')
+#2 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/pharmacy')
+#3 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/pharmacy
+HTTP_REFERER=http://pharmacy.local/distributor/1
+---
+2016/09/23 16:11:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Извините, но {Distributor} не найден.' in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php:48
+Stack trace:
+#0 /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php(7): DistributorController->loadModel('20')
+#1 [internal function]: DistributorController->actionView('20')
+#2 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(DistributorController), Array)
+#3 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DistributorController), Object(ReflectionMethod), Array)
+#4 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('distributor/vie...')
+#9 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/olegivanov/Sites/pharmacy/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/distributor/20
+HTTP_REFERER=http://pharmacy.local/pharmacy/index
+---
+2016/09/23 16:42:21 [error] [php] Undefined index: пр-кт Маркса 15 (/Users/olegivanov/Sites/pharmacy/protected/components/FileConverterAbstract.php:50)
+Stack trace:
+#0 unknown(0): DistributorController->actionView()
+#1 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#2 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): DistributorController->runAction()
+#5 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): DistributorController->runActionWithFilters()
+#6 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): DistributorController->run()
+#7 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/distributor/1
+in /Users/olegivanov/Sites/pharmacy/protected/components/FileConverterAbstract.php (50)
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (90)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+2016/09/23 16:44:11 [warning] [application] Не удалось присвоить небезопасный атрибут "0" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:44:11 [warning] [application] Не удалось присвоить небезопасный атрибут "1" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:44:11 [warning] [application] Не удалось присвоить небезопасный атрибут "2" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:44:38 [warning] [application] Не удалось присвоить небезопасный атрибут "0" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:44:38 [warning] [application] Не удалось присвоить небезопасный атрибут "1" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:44:38 [warning] [application] Не удалось присвоить небезопасный атрибут "2" класса "FileExist".
+in /Users/olegivanov/Sites/pharmacy/protected/models/File.php (94)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/DistributorController.php (19)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 16:59:15 [error] [php] Missing argument 2 for CHtml::label(), called in /Users/olegivanov/Sites/pharmacy/protected/views/file/comparePharmacy.php on line 15 and defined (/Users/olegivanov/Sites/yii/framework/web/helpers/CHtml.php:577)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): FileController->renderInternal()
+#1 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): FileController->renderFile()
+#2 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): FileController->renderPartial()
+#3 /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php(41): FileController->render()
+#4 unknown(0): FileController->actionComparePharmacy()
+#5 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#6 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): FileController->runAction()
+#9 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): FileController->runActionWithFilters()
+#10 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): FileController->run()
+#11 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/file/comparePharmacy/38
+in /Users/olegivanov/Sites/pharmacy/protected/views/file/comparePharmacy.php (15)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/FileController.php (41)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
+2016/09/23 17:27:27 [error] [php] number_format() expects parameter 1 to be double, array given (/Users/olegivanov/Sites/pharmacy/protected/views/pharmacy/view.php:31)
+Stack trace:
+#0 /Users/olegivanov/Sites/yii/framework/web/CBaseController.php(95): PharmacyController->renderInternal()
+#1 /Users/olegivanov/Sites/yii/framework/web/CController.php(869): PharmacyController->renderFile()
+#2 /Users/olegivanov/Sites/yii/framework/web/CController.php(782): PharmacyController->renderPartial()
+#3 /Users/olegivanov/Sites/pharmacy/protected/controllers/PharmacyController.php(25): PharmacyController->render()
+#4 unknown(0): PharmacyController->actionView()
+#5 /Users/olegivanov/Sites/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#6 /Users/olegivanov/Sites/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /Users/olegivanov/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/olegivanov/Sites/yii/framework/web/CController.php(286): PharmacyController->runAction()
+#9 /Users/olegivanov/Sites/yii/framework/web/CController.php(265): PharmacyController->runActionWithFilters()
+#10 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(282): PharmacyController->run()
+#11 /Users/olegivanov/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/olegivanov/Sites/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/olegivanov/Sites/pharmacy/index.php(13): CWebApplication->run()
+REQUEST_URI=/pharmacy/41
+in /Users/olegivanov/Sites/pharmacy/protected/views/pharmacy/view.php (31)
+in /Users/olegivanov/Sites/pharmacy/protected/controllers/PharmacyController.php (25)
+in /Users/olegivanov/Sites/pharmacy/index.php (13)
